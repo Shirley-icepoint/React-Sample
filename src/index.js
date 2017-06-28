@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Form from './Form.js';
 import Calculator from './Calculator.js';
+import Panel from './Panel.js';
+import SignUpDialog from './SignUpDialog.js';
 
 // helper function to check if anyone wins the game
 function calculateWinner(squares) {
@@ -153,6 +155,10 @@ function App() {
       <Form />
       <br />
       <Calculator />
+      <br />
+      <SignUpDialog />
+      <br />
+      <Panel />
     </div>
   );
 }
