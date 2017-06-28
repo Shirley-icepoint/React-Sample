@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Form from './Form.js';
+import Calculator from './Calculator.js';
 
 // helper function to check if anyone wins the game
 function calculateWinner(squares) {
@@ -143,9 +145,20 @@ class Game extends React.Component {
   }
 }
 
+function App() {
+  return (
+    <div>
+      <Game />
+      <br/>
+      <Form />
+      <br />
+      <Calculator />
+    </div>
+  );
+}
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <App />,
   document.getElementById('root')
 );
