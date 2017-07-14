@@ -5,6 +5,7 @@ import Form from './Form.js';
 import Calculator from './Calculator.js';
 import Panel from './Panel.js';
 import SignUpDialog from './SignUpDialog.js';
+import FilterableProductTable from './FilterableProductTable.js';
 
 // helper function to check if anyone wins the game
 function calculateWinner(squares) {
@@ -147,6 +148,15 @@ class Game extends React.Component {
   }
 }
 
+var PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
+
 function App() {
   return (
     <div>
@@ -159,6 +169,7 @@ function App() {
       <SignUpDialog />
       <br />
       <Panel />
+      <FilterableProductTable products={PRODUCTS} />
     </div>
   );
 }
